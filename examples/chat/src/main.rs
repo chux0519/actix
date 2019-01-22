@@ -23,9 +23,9 @@ use tokio_io::codec::FramedRead;
 use tokio_io::AsyncRead;
 use tokio_tcp::{TcpListener, TcpStream};
 
-mod codec;
-mod server;
-mod session;
+pub mod codec;
+pub mod server;
+pub mod session;
 
 use codec::ChatCodec;
 use server::ChatServer;

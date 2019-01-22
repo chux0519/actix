@@ -43,7 +43,7 @@ impl Actor for ChatSession {
                 addr: ctx.address(),
             })
             .into_actor(self)
-            .then(|res, act, ctx| {
+            .then(|res, mut act, ctx| {
                 match res {
                     Ok(res) => act.id = res,
                     // something is wrong with chat server
